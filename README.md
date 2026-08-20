@@ -32,11 +32,9 @@ https://www.ncbi.nlm.nih.gov/sra/PRJNA1060933
 ```text
 .
 ├── data/
-│   ├── assemblies/
 │   ├── proteins/
 │   ├── cds/
 │   ├── gff3/
-│   └── metadata/
 │
 ├── scripts/
 │   ├── 01_genome_assembly/
