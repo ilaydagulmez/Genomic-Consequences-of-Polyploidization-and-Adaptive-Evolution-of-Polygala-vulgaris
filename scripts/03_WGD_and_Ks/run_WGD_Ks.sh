@@ -1,38 +1,29 @@
 #!/bin/bash
 
-SAMPLE=$1
-CDS=$2
-GFF=$3
-
-mkdir -p "${SAMPLE}_WGD"
-
-wgd dmd \
-    "${CDS}" \
-    -o "${SAMPLE}_WGD/dmd"
+wgd dmd genome_CDS.fa \
+    -o dmd
 
 wgd ksd \
-    "${SAMPLE}_WGD/dmd/${SAMPLE}_CDS.tsv" \
-    "${CDS}" \
-    -o "${SAMPLE}_WGD/ksd"
-    
+    genome_CDS.tsv \
+    genome_CDS.fa \
+    -o ksd
+
 wgd syn \
     -f transcript \
     -a ID \
-    "${SAMPLE}_WGD/dmd/${SAMPLE}_CDS.tsv" \
-    "${GFF}" \
-    -ks "${SAMPLE}_WGD/ksd/${SAMPLE}_CDS.tsv.ks.tsv" \
+    genome_CDS.tsv \
+    genome_annotation.gff3 \
+    -ks genome_CDS.tsv.ks.tsv \
     --pathiadhore ./i-adhore \
-    -o "${SAMPLE}_WGD/syn"
-    
+    -o syn
+
 wgd peak \
     --heuristic \
-    "${SAMPLE}_WGD/ksd/${SAMPLE}_CDS.tsv.ks.tsv" \
-    -ap "${SAMPLE}_WGD/syn/iadhore-out/anchorpoints.txt" \
-    -sm "${SAMPLE}_WGD/syn/iadhore-out/segments.txt" \
-    -le "${SAMPLE}_WGD/syn/iadhore-out/list_elements.txt" \
-    -mp "${SAMPLE}_WGD/syn/iadhore-out/multiplicon_pairs.txt" \
+    genome_CDS.tsv.ks.tsv \
+    -ap ./syn/iadhore-out/anchorpoints.txt \
+    -sm ./syn/iadhore-out/segments.txt \
+    -le ./syn/iadhore-out/list_elements.txt \
+    -mp ./syn/iadhore-out/multiplicon_pairs.txt \
     -n 1 4 \
     -kc 3 \
-    -o "${SAMPLE}_WGD/wgd_peak"
-
-echo "WGD and Ks analysis completed for ${SAMPLE}"
+    -o wgd_peak
