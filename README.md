@@ -1,4 +1,3 @@
-# Genomic Consequences of Polyploidization and Adaptive Evolution of Polygala vulgaris
 # Genomic Consequences of Polyploidization and Adaptive Evolution of *Polygala vulgaris*
 
 This repository contains genomic resources, analysis scripts, and reproducible computational workflows associated with the comparative and evolutionary genomic analysis of tetraploid *Polygala vulgaris*.
