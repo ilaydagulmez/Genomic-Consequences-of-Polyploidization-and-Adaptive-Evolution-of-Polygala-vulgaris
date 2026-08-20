@@ -5,16 +5,6 @@
 #   clusterProfiler
 #   enrichplot
 
-Usage:
-
-Rscript 01_WGD_GO_enrichment.R \
-   <sample> \
-   <ks_genelevel.tsv> \
-   <MCScanX.collinearity> \
-   <InterProScan.tsv> \
-   <WGD1_min> <WGD1_max> \
-   <WGD2_min> <WGD2_max>
-
 suppressPackageStartupMessages({
   library(tidyverse)
   library(clusterProfiler)
