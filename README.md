@@ -54,13 +54,6 @@ https://www.ncbi.nlm.nih.gov/sra/PRJNA1060933
 
 The `data/` directory contains the principal genomic resources generated and used in this study.
 
-### Genome assemblies
-
-Final genome assemblies are listed in:
-
-```text
-data/assemblies/
-```
 
 Because of their large file sizes, genome assemblies are provided through external permanent download links rather than being stored directly in the GitHub repository.
 
@@ -94,14 +87,6 @@ Final structural genome annotations in GFF3 format are available in:
 
 ```text
 data/gff3/
-```
-
-### Metadata
-
-Sample metadata and WGD-associated Ks intervals used in downstream analyses are provided in:
-
-```text
-data/metadata/
 ```
 
 ---
