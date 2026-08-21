@@ -86,7 +86,7 @@ data/cds/
 Final structural genome annotations in GFF3 format are available in:
 
 ```text
-data/gff3/
+data/gff/
 ```
 
 ---
