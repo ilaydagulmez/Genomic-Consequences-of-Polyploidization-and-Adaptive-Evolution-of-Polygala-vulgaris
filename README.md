@@ -34,7 +34,7 @@ https://www.ncbi.nlm.nih.gov/sra/PRJNA1060933
 ├── data/
 │   ├── proteins/
 │   ├── cds/
-│   ├── gff3/
+│   ├── gff/
 │
 ├── scripts/
 │   ├── 01_genome_assembly/
